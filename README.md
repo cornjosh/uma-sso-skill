@@ -22,7 +22,7 @@ Keep a Huawei UMA tunnel running in the background while AI agents reuse its SSH
 - Current release: x86_64/amd64
 - A valid Huawei UMA `sso://` or `umasso://` access URL
 
-For copyright reasons, replace `assets/umasso` with the official Huawei UMA executable you downloaded and are authorized to use. The current file is for amd64. For aarch64 or another architecture, use the corresponding official executable and update the architecture check in `scripts/run.sh` accordingly.
+For copyright reasons, replace `assets/umasso` with the official Huawei UMA executable you downloaded and are authorized to use; the current file is an evaluation build. For aarch64 or another architecture, use the corresponding official executable and update the architecture check in `scripts/run.sh` accordingly.
 
 ## Installation 🚀
 
@@ -44,10 +44,10 @@ If the repository is private, the agent environment must be authenticated to a G
 
 ### Use `uma` directly from your shell
 
-Ask your agent to read the shell installation guide in this repository:
+After installing the skill, ask your agent to read its shell installation guide if you want to run `uma` directly from your shell:
 
 ```text
-Read https://github.com/cornjosh/uma-sso-skill and follow references/install-shell.md to install the uma command for my current shell.
+Follow references/install-shell.md from the uma-sso skill to install the uma command for my current shell.
 ```
 
 ## Get an SSO URL 🔑
@@ -55,28 +55,15 @@ Read https://github.com/cornjosh/uma-sso-skill and follow references/install-she
 1. Sign in to the Huawei UMA web portal.
 2. Open **Operations → Assets → Access** and find the asset you want to access over SSH.
 3. Press `F12` to open the browser developer tools, then select the **Network** tab.
-4. Select the appropriate account, `SSH`, password authentication, **Do not use a remote client**, and **Local operations**, then click **Log in**.
+4. Select the appropriate account, `SSH`, password, **Do not use a remote client**, and **Local operations**, then click **Log in**.
 5. In the Network requests, copy the access URL that begins with `sso://`.
 
 ## Usage ⌨️
 
-Start the UMA bridge in a background terminal and wait for `UMA_BRIDGE_READY=N`:
+Send the URL beginning with `sso://` directly to your AI agent:
 
 ```bash
-scripts/run.sh 'sso://...'
-```
-
-Reuse the same `N` from other terminals:
-
-```bash
-# SSH
-scripts/run.sh -F N
-
-# SCP
-scripts/run.sh -S -F N ./local-file :/remote/path
-
-# SFTP
-scripts/run.sh -C sftp -F N
+'sso://...'
 ```
 
 Review [SKILL.md](SKILL.md) for the complete workflow and safety guidance before connecting.
@@ -99,4 +86,14 @@ scripts/run.sh              Unified entry point
 scripts/uma_sso_bridge.py   UMA bridge manager
 references/install-shell.md Shell function installation
 assets/umasso               Replaceable official Huawei UMA executable
+LICENSE                     BSD-3-Clause license text
+NOTICE                      License scope and UMA executable exclusion
 ```
+
+---
+
+🏵 UMA SSO Skill © Josh Zeng. Released under the [BSD-3-Clause License](LICENSE), excluding `assets/umasso`; see [NOTICE](NOTICE).
+
+Authored and maintained by Josh Zeng.
+
+[@GitHub](https://github.com/cornjosh)

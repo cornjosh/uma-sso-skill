@@ -1,0 +1,11 @@
+License scope
+=============
+
+The BSD-3-Clause license in LICENSE applies to this repository's source code
+and documentation, except for the following file:
+
+    assets/umasso
+
+That file is a Huawei UMA executable. It is not licensed under BSD-3-Clause by
+this project. Any rights and restrictions for it are determined by Huawei and
+the terms under which the user obtained the executable.
