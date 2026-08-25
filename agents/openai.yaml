@@ -1,0 +1,6 @@
+interface:
+  display_name: "UMA SSO Bridge"
+  short_description: "UMA sso:// umasso:// tunnel and SSH manager"
+  default_prompt: "Use $uma-sso to open an sso:// link in a background UMA bridge and connect from another terminal."
+policy:
+  allow_implicit_invocation: true
