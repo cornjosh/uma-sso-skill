@@ -40,8 +40,6 @@ npx skills add cornjosh/uma-sso-skill
 请阅读并将 https://github.com/cornjosh/uma-sso-skill 安装为当前环境可用的 Agent Skill。
 ```
 
-如果仓库为私有状态，请确保 Agent 所在环境已经登录有访问权限的 GitHub 账号。
-
 ### 在终端直接使用
 
 安装 Skill 后，如果希望在 shell 中直接运行 `uma`，可以让 Agent 阅读仓库中的 shell 安装说明：

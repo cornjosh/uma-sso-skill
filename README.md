@@ -40,8 +40,6 @@ Send this prompt to Codex, Claude Code, OpenCode, or another agent that supports
 Read https://github.com/cornjosh/uma-sso-skill and install it as an agent skill for this environment.
 ```
 
-If the repository is private, the agent environment must be authenticated to a GitHub account with access.
-
 ### Use `uma` directly from your shell
 
 After installing the skill, ask your agent to read its shell installation guide if you want to run `uma` directly from your shell:
